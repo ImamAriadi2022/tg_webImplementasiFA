@@ -1,3 +1,9 @@
+<?php
+
+include '../function/tamplate.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +26,8 @@
     </style>
 </head>
 <body>
+
+    <?=header()?>
     <h1>Finite Automata Simulator</h1>
 
     <div>
