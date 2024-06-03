@@ -1,3 +1,9 @@
+<?php
+ include '../tamplate.php';
+?>
+
+<?=tamplate_header('gamestate')?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Pac-Man Game</title>
     <style>
-        body {
+        section {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -26,8 +32,11 @@
     </style>
 </head>
 <body>
-    <div id="score">Score: 0</div>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
-    <script src="pacman.js"></script>
+    <section>
+        <div style="padding-top: 10rem;" id="score">Score: 0</div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <script src="pacman.js"></script>
+    </section>
 </body>
 </html>
+
