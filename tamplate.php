@@ -21,5 +21,3 @@ function tamplate_header($title) {
 }
 
 
-functio
-
