@@ -21,3 +21,10 @@ function tamplate_header($title) {
 }
 
 
+function tamplate_footer(){
+    echo <<<EOT
+        <footer>
+            <p>&copy; 2022 Web Finite State Automata</p>
+        </footer>
+    EOT;
+}
