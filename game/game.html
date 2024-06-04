@@ -1,14 +1,9 @@
-<?php
- include '../tamplate.php';
-?>
-
-<?=tamplate_header('gamestate')?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Simple Pac-Man Game</title>
     <style>
         section {
@@ -32,13 +27,21 @@
     </style>
 </head>
 <body>
+    <nav>
+        <h1>Web Finite State Automata</h1>
+        <a href="../index.html">Home</a>
+        <a href="#">Implementasi Game</a>
+    </nav>
+
     <section>
         <div style="padding-top: 10rem;" id="score">Score: 0</div>
         <canvas id="gameCanvas" width="400" height="400"></canvas>
         <script src="pacman.js"></script>
     </section>
 
-    <?=tamplate_footer()?>
+    <footer style="background-color: #333333;">
+        <p style="padding: 3rem; color: #ffffff;">&copy; Imam Ariadi & M Niko Baihaqi</p>
+    </footer>
+    
 </body>
 </html>
-

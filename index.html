@@ -1,15 +1,9 @@
-<?php
-
-include 'tamplate.php';
-?>
-
-<?=tamplate_header('Home')?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Finite Automata Simulator</title>
     <style>
         body {
@@ -27,6 +21,12 @@ include 'tamplate.php';
     </style>
 </head>
 <body>
+    <nav>
+        <h1>Web Finite State Automata</h1>
+        <a href="../index.html">Home</a>
+        <a href="game/game.html">Implementasi Game</a>
+    </nav>
+    
     <h1>Finite Automata Simulator</h1>
 
     <div>
@@ -68,10 +68,11 @@ include 'tamplate.php';
     <div id="result"></div>
     <div id="automata-container"></div>
 
-    <?=tamplate_footer()?>
-
+    <footer style="background-color: #333333;">
+        <p style="padding: 3rem; color: #ffffff;">&copy; Imam Ariadi & M Niko Baihaqi</p>
+    </footer>
+    
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="automata.js"></script>
 </body>
 </html>
-
