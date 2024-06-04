@@ -15,7 +15,6 @@ function tamplate_header($title) {
                 <h1>Web Finite State Automata</h1>
                 <a href="../index.php">Home</a>
                 <a href= "game/game.php">Impelemtasi Game</a>
-                <a href="materi/materi.html">Dokumentasi Soal</a>
             </nav>
     EOT;
 }
@@ -23,8 +22,12 @@ function tamplate_header($title) {
 
 function tamplate_footer(){
     echo <<<EOT
-        <footer>
-            <p>&copy; 2022 Web Finite State Automata</p>
+        <footer style="
+        background-color: #333333;
+        ">
+            <p style="
+            padding: 3rem;
+            color: #ffffff;">&copy; Imam Ariadi & M Niko baihaqi</p>
         </footer>
     EOT;
 }

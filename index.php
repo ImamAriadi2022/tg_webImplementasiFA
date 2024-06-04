@@ -68,7 +68,10 @@ include 'tamplate.php';
     <div id="result"></div>
     <div id="automata-container"></div>
 
+    <?=tamplate_footer()?>
+
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="automata.js"></script>
 </body>
 </html>
+

@@ -37,6 +37,8 @@
         <canvas id="gameCanvas" width="400" height="400"></canvas>
         <script src="pacman.js"></script>
     </section>
+
+    <?=tamplate_footer()?>
 </body>
 </html>
 
