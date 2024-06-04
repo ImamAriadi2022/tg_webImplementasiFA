@@ -1,5 +1,3 @@
-Oke, berikut adalah README.md yang relevan dengan kode yang diberikan, dengan penjelasan awal tentang Finite Automata (FA):
-
 ## Finite Automata Pac-Man
 
 Proyek ini menggabungkan implementasi Finite Automata (FA) dalam JavaScript dengan permainan Pac-Man klasik. FA digunakan untuk memvalidasi string input dan mengontrol perilaku Pac-Man, sementara permainan Pac-Man memberikan visualisasi interaktif dari konsep FA.
