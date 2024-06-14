@@ -42,4 +42,168 @@ Permainan Pac-Man adalah permainan arcade klasik di mana pemain mengontrol Pac-M
 * Permainan Pac-Man dalam proyek ini adalah versi sederhana dari permainan aslinya.
 * Visualisasi FA menggunakan library D3.js.
 
-Semoga README ini memberikan penjelasan yang jelas tentang proyek ini. Selamat mencoba dan bereksperimen dengan Finite Automata dan Pac-Man!
+
+
+###PACMAN DOKUMENTATION
+Berikut adalah dokumentasi yang ditulis dalam bahasa Indonesia untuk `readme.md` yang menjelaskan implementasi kode permainan Pac-Man di atas.
+
+```markdown
+# Permainan Pac-Man
+
+Ini adalah implementasi sederhana dari permainan klasik Pac-Man menggunakan HTML5 Canvas dan JavaScript. Permainan ini menampilkan Pac-Man, hantu, titik-titik, dinding, dan sistem deteksi tabrakan dasar.
+
+## Daftar Isi
+- [Pengaturan Permainan](#pengaturan-permainan)
+- [Elemen Permainan](#elemen-permainan)
+- [Fungsi Permainan](#fungsi-permainan)
+- [Kontrol Keyboard](#kontrol-keyboard)
+- [Fitur Layar Penuh](#fitur-layar-penuh)
+- [Cara Menjalankan](#cara-menjalankan)
+
+## Pengaturan Permainan
+
+Permainan diinisialisasi dengan mengatur kanvas, menentukan ukuran ubin, dan menghitung jumlah ubin.
+
+```javascript
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const tileSize = 20;
+const tilesCount = canvas.width / tileSize;
+
+let score = 0;
+let speed = 200;
+let level = 1;
+```
+
+## Elemen Permainan
+
+### Pac-Man
+Pac-Man diinisialisasi di sudut kiri atas kanvas dan mulai bergerak ke kanan.
+
+```javascript
+let pacMan = { x: 1, y: 1, direction: 'right' };
+```
+
+### Hantu
+Dua hantu diinisialisasi di posisi tertentu dengan arah awal.
+
+```javascript
+const ghosts = [
+    { x: tilesCount - 2, y: tilesCount - 2, direction: 'left' },
+    { x: 1, y: tilesCount - 2, direction: 'up' }
+];
+```
+
+### Titik dan Dinding
+Titik ditempatkan pada grid, menghindari posisi yang ditempati oleh dinding, hantu, dan Pac-Man.
+
+```javascript
+const dots = [];
+const walls = [
+    { x: 5, y: 5 }, { x: 6, y: 5 }, { x: 7, y: 5 },
+    { x: 5, y: 6 }, { x: 7, y: 6 },
+    { x: 5, y: 7 }, { x: 6, y: 7 }, { x: 7, y: 7 },
+];
+```
+
+## Fungsi Permainan
+
+### Menggambar Elemen Permainan
+Fungsi `drawGame` membersihkan kanvas dan menggambar ulang dinding, titik, Pac-Man, dan hantu.
+
+```javascript
+function drawGame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Gambar dinding, titik, Pac-Man, dan hantu
+}
+```
+
+### Memindahkan Pac-Man
+Fungsi `movePacMan` memperbarui posisi Pac-Man berdasarkan arah saat ini, memastikan dia tidak bergerak melalui dinding.
+
+```javascript
+function movePacMan() {
+    // Perbarui posisi Pac-Man berdasarkan arah
+}
+```
+
+### Memindahkan Hantu
+Fungsi `moveGhosts` memperbarui posisi hantu secara acak, memastikan mereka tidak bergerak melalui dinding.
+
+```javascript
+function moveGhosts() {
+    // Perbarui posisi hantu secara acak
+}
+```
+
+### Memeriksa Tabrakan
+Fungsi `checkCollisions` memeriksa tabrakan antara Pac-Man dan titik atau hantu.
+
+```javascript
+function checkCollisions() {
+    // Periksa tabrakan dengan titik dan hantu
+}
+```
+
+### Menginisialisasi Level
+Fungsi `initializeLevel` mengatur ulang titik-titik dan posisi Pac-Man serta hantu, dan menggambar elemen permainan.
+
+```javascript
+function initializeLevel() {
+    // Atur ulang titik-titik dan posisi Pac-Man serta hantu
+    drawGame();
+}
+```
+
+### Loop Permainan
+Fungsi `gameLoop` memindahkan Pac-Man dan hantu, memeriksa tabrakan, dan menggambar ulang elemen permainan.
+
+```javascript
+function gameLoop() {
+    movePacMan();
+    moveGhosts();
+    checkCollisions();
+    drawGame();
+    setTimeout(gameLoop, speed);
+}
+```
+
+## Kontrol Keyboard
+
+Gunakan tombol panah untuk mengontrol arah Pac-Man.
+
+```javascript
+document.addEventListener('keydown', event => {
+    switch (event.key) {
+        case 'ArrowRight': pacMan.direction = 'right'; break;
+        case 'ArrowLeft': pacMan.direction = 'left'; break;
+        case 'ArrowUp': pacMan.direction = 'up'; break;
+        case 'ArrowDown': pacMan.direction = 'down'; break;
+    }
+});
+```
+
+## Fitur Layar Penuh
+
+Permainan mendukung mode layar penuh. Tombol `fullscreenBtn` dan `minimizeBtn` memungkinkan beralih ke mode layar penuh.
+
+```javascript
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+const minimizeBtn = document.getElementById('minimizeBtn');
+
+fullscreenBtn.addEventListener('click', () => {
+    // Masuk ke mode layar penuh
+});
+minimizeBtn.addEventListener('click', () => {
+    // Keluar dari mode layar penuh
+});
+```
+
+## Cara Menjalankan
+
+1. Buka `index.html` di peramban web.
+2. Gunakan tombol panah untuk mengontrol Pac-Man.
+3. Klik tombol layar penuh untuk masuk ke mode layar penuh.
+
+Selamat bermain!
+```
