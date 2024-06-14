@@ -1,0 +1,14 @@
+button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#minimizeBtn {
+    left: 120px; /* Agar tombol minimize tidak menumpuk dengan tombol fullscreen */
+}

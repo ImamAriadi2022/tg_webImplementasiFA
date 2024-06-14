@@ -177,3 +177,5 @@ function drawAutomata(automata) {
 
 // Initialize with example automata
 drawAutomata(currentAutomata);
+
+

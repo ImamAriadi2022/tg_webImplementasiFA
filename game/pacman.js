@@ -209,3 +209,61 @@ function gameLoop() {
 
 initializeLevel();
 gameLoop();
+
+// Fullscreen and Minimize buttons
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+const minimizeBtn = document.getElementById('minimizeBtn');
+const gameCanvas = document.getElementById('gameCanvas');
+
+fullscreenBtn.addEventListener('click', () => {
+    if (gameCanvas.requestFullscreen) {
+        gameCanvas.requestFullscreen();
+    } else if (gameCanvas.mozRequestFullScreen) { // Firefox
+        gameCanvas.mozRequestFullScreen();
+    } else if (gameCanvas.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        gameCanvas.webkitRequestFullscreen();
+    } else if (gameCanvas.msRequestFullscreen) { // IE/Edge
+        gameCanvas.msRequestFullscreen();
+    }
+    fullscreenBtn.style.display = 'none';
+    minimizeBtn.style.display = 'inline';
+});
+
+minimizeBtn.addEventListener('click', () => {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) { // Firefox
+        document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { // IE/Edge
+        document.msExitFullscreen();
+    }
+    fullscreenBtn.style.display = 'inline';
+    minimizeBtn.style.display = 'none';
+});
+
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        fullscreenBtn.style.display = 'inline';
+        minimizeBtn.style.display = 'none';
+    }
+});
+document.addEventListener('mozfullscreenchange', () => {
+    if (!document.mozFullScreenElement) {
+        fullscreenBtn.style.display = 'inline';
+        minimizeBtn.style.display = 'none';
+    }
+});
+document.addEventListener('webkitfullscreenchange', () => {
+    if (!document.webkitFullscreenElement) {
+        fullscreenBtn.style.display = 'inline';
+        minimizeBtn.style.display = 'none';
+    }
+});
+document.addEventListener('msfullscreenchange', () => {
+    if (!document.msFullscreenElement) {
+        fullscreenBtn.style.display = 'inline';
+        minimizeBtn.style.display = 'none';
+    }
+});
