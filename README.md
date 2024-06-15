@@ -44,7 +44,7 @@ Permainan Pac-Man adalah permainan arcade klasik di mana pemain mengontrol Pac-M
 
 
 
-###PACMAN DOKUMENTATION
+### PACMAN DOKUMENTATION
 Berikut adalah dokumentasi yang ditulis dalam bahasa Indonesia untuk `readme.md` yang menjelaskan implementasi kode permainan Pac-Man di atas.
 
 ```markdown
